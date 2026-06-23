@@ -233,3 +233,14 @@ function getSavedProducts() {
 
 function saveAddedProducts() {
     localStorage.setItem(SAVED_PRODUCTS_KEY, JSON.stringify(addedProducts));
+}
+
+function showMessage(message, isError) {
+    formMessage.textContent = message;
+
+    if (isError) {
+        formMessage.classList.add("error");
+    } else {
+        formMessage.classList.remove("error");
+    }
+}

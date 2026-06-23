@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Mouse",
+        "sku": "ELEC-MSE-001",
+        "category": "Electronics",
+        "price": 24.99,
+        "stock": 45
+    },
+    {
+        "id": 2,
+        "name": "Mechanical Keyboard",
+        "sku": "ELEC-KBD-002",
+        "category": "Electronics",
+        "price": 79.99,
+        "stock": 18
+    },
+    {
+        "id": 3,
+        "name": "Office Chair",
+        "sku": "FURN-CHR-003",
+        "category": "Furniture",
+        "price": 149.5,
+        "stock": 12
+    },
+    {
+        "id": 4,
+        "name": "Standing Desk",
+        "sku": "FURN-DSK-004",
+        "category": "Furniture",
+        "price": 299.99,
+        "stock": 7
+    },
+    {
+        "id": 5,
+        "name": "Notebook Pack",
+        "sku": "STAT-NBK-005",
+        "category": "Stationery",
+        "price": 12.75,
+        "stock": 80
+    },
+    {
+        "id": 6,
+        "name": "Ballpoint Pens",
+        "sku": "STAT-PEN-006",
+        "category": "Stationery",
+        "price": 6.25,
+        "stock": 150
+    },
+    {
+        "id": 7,
+        "name": "USB-C Hub",
+        "sku": "ELEC-HUB-007",
+        "category": "Electronics",
+        "price": 39.99,
+        "stock": 32
+    },
+    {
+        "id": 8,
+        "name": "Storage Cabinet",
+        "sku": "FURN-CAB-008",
+        "category": "Furniture",
+        "price": 189,
+        "stock": 9
+    },
+    {
+        "id": 9,
+        "name": "Printer Paper",
+        "sku": "STAT-PPR-009",
+        "category": "Stationery",
+        "price": 18.49,
+        "stock": 64
+    },
+    {
+        "id": 10,
+        "name": "Desk Lamp",
+        "sku": "HOME-LMP-010",
+        "category": "Office Supplies",
+        "price": 34.99,
+        "stock": 25
+    }
+]

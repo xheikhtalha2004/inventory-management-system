@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
-}body {
+}
+
+body {
     margin: 0;
     background: #f4f6f8;
     color: #1f2933;
@@ -239,24 +241,5 @@ main {
 
     .form-actions button {
         width: 100%;
-g-summary {
-        padding: 16px;
-    }
-
-    .inventory-form {
-        grid-template-columns: 1fr;
-    }
-
-    .form-actions {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .form-actions button {
-        width: 100%;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
     }
 }
