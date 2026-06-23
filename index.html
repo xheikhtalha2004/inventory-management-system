@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <h1>Product Catalog</h1>
+            <p>Search, filter, and sort inventory products.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="inventory-form-section" aria-labelledby="addInventoryTitle">
+            <h2 id="addInventoryTitle">Add Inventory</h2>
+
+            <form id="inventoryForm" class="inventory-form">
+                <div class="control-group">
+                    <label for="productName">Product name</label>
+                    <input
+                        type="text"
+                        id="productName"
+                        name="name"
+                        placeholder="Enter product name"
+                        required
+                    >
+                </div>
+
+                <div class="control-group">
+                    <label for="productSku">SKU</label>
+                    <input
+                        type="text"
+                        id="productSku"
+                        name="sku"
+                        placeholder="Enter SKU"
+                        required
+                    >
+                </div>
+
+                <div class="control-group">
+                    <label for="productCategory">Category</label>
+                    <input
+                        type="text"
+                        id="productCategory"
+                        name="category"
+                        list="categoryOptions"
+                        placeholder="Enter or choose category"
+                        required
+                    >
+                    <datalist id="categoryOptions"></datalist>
+                </div>
+
+                <div class="control-group">
+                    <label for="productPrice">Price</label>
+                    <input
+                        type="number"
+                        id="productPrice"
+                        name="price"
+                        min="0"
+                        step="0.01"
+                        placeholder="0.00"
+                        required
+                    >
+                </div>
+
+                <div class="control-group">
+                    <label for="productStock">Stock quantity</label>
+                    <input
+                        type="number"
+                        id="productStock"
+                        name="stock"
+                        min="0"
+                        step="1"
+                        placeholder="0"
+                        required
+                    >
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Add product</button>
+                    <button type="reset">Clear</button>
+                </div>
+
+                <p id="formMessage" class="form-message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="catalog-controls" aria-label="Product controls">
+            <div class="control-group">
+                <label for="searchInput">Search by name</label>
+                <input
+                    type="search"
+                    id="searchInput"
+                    name="search"
+                    placeholder="Search products..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="control-group">
+                <label for="categoryFilter">Category</label>
+                <select id="categoryFilter" name="category">
+                    <option value="all">All categories</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="priceSort">Sort by price</label>
+                <select id="priceSort" name="sort">
+                    <option value="default">Default</option>
+                    <option value="price-asc">Low to high</option>
+                    <option value="price-desc">High to low</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="catalog-summary" aria-live="polite">
+            <p><span id="resultsCount">0</span> products found</p>
+        </section>
+
+        <section
+            id="productList"
+            class="product-grid"
+            aria-label="Product results"
+        ></section>
+
+        <p id="emptyState" class="empty-state" hidden>No products match your search.</p>
+    </main>
+
+    <template id="productCardTemplate">
+        <article class="product-card">
+            <div class="product-details">
+                <h2 class="product-name"></h2>
+                <p class="product-sku"></p>
+                <p class="product-category"></p>
+                <p class="product-price"></p>
+                <p class="product-stock"></p>
+            </div>
+        </article>
+    </template>
+</body>
+</html>

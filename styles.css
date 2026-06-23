@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}body {
+    margin: 0;
+    background: #f4f6f8;
+    color: #1f2933;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.app-header {
+    background: #172033;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.app-header p {
+    margin: 8px 0 0;
+    color: #d8dee9;
+}
+
+main {
+    padding: 25px 0 45px;
+}
+
+.inventory-form-section,
+.catalog-controls,
+.catalog-summary,
+.empty-state,
+.product-card {
+    background: #ffffff;
+    border: 1px solid #d7dde5;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(31, 41, 51, 0.08);
+}
+
+.inventory-form-section {
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.inventory-form-section h2 {
+    margin: 0 0 18px;
+    font-size: 22px;
+}
+
+.inventory-form {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    align-items: end;
+}
+
+.catalog-controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.control-group label {
+    color: #667085;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.control-group input,
+.control-group select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid #d7dde5;
+    border-radius: 6px;
+    padding: 9px 11px;
+}
+
+.control-group input:focus,
+.control-group select:focus {
+    border-color: #2563eb;
+    outline: 2px solid rgba(37, 99, 235, 0.18);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.form-actions button {
+    min-height: 42px;
+    border: 0;
+    border-radius: 6px;
+    padding: 9px 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.form-actions button[type="reset"] {
+    background: #eef2f6;
+    color: #1f2933;
+}
+
+.form-message {
+    grid-column: 1 / -1;
+    min-height: 22px;
+    margin: 0;
+    color: #0f766e;
+    font-weight: bold;
+}
+
+.form-message.error {
+    color: #b42318;
+}
+
+.catalog-summary {
+    padding: 12px 18px;
+    margin-bottom: 18px;
+}
+
+.catalog-summary p {
+    margin: 0;
+    color: #667085;
+    font-weight: bold;
+}
+
+#resultsCount {
+    color: #1f2933;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.product-card {
+    padding: 16px;
+}
+
+.product-details {
+    display: grid;
+    gap: 8px;
+}
+
+.product-name {
+    margin: 0;
+    font-size: 18px;
+}
+
+.product-sku,
+.product-category,
+.product-price,
+.product-stock {
+    margin: 0;
+}
+
+.product-sku,
+.product-stock {
+    color: #667085;
+    font-size: 14px;
+}
+
+.product-category {
+    width: fit-content;
+    border-radius: 20px;
+    background: #e7f5f2;
+    color: #0f5f58;
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.product-price {
+    color: #1d4ed8;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.empty-state {
+    padding: 25px;
+    margin: 0;
+    color: #667085;
+    text-align: center;
+    font-weight: bold;
+}
+
+[hidden] {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .inventory-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalog-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-header h1 {
+        font-size: 30px;
+    }
+
+    .inventory-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+g-summary {
+        padding: 16px;
+    }
+
+    .inventory-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
